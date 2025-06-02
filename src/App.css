@@ -1,0 +1,126 @@
+/* Reset and base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to right, #ffe4e1, #e0ffff);
+  color: #333;
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.App h1 {
+  font-size: 1.5rem;
+  color: #ff1493;
+  margin: 0.2rem 0;
+}
+
+.hangman-img {
+  height: 20vh;
+  max-width: 80%;
+  object-fit: contain;
+}
+
+.word {
+  font-size: 1.4rem;
+  letter-spacing: 0.4rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #4b0082;
+}
+
+.letters {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3rem;
+  width: 100%;
+  padding: 0.3rem 0;
+}
+
+.letter-btn {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #fcd34d;
+  color: #4b0082;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.letter-btn:hover {
+  background-color: #fbbf24;
+  transform: scale(1.1);
+}
+
+.letter-btn:disabled {
+  background-color: #d1d5db;
+  color: #888888;
+  cursor: default;
+}
+
+.end-screen {
+  background-color: #fffaf0;
+  border: 2px dashed #ffb6c1;
+  padding: 0.6rem;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.end-screen h2 {
+  font-size: 1.2rem;
+  color: #ff4500;
+  margin: 0.3rem 0;
+}
+
+.end-screen p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+.end-screen button {
+  padding: 0.4rem 1rem;
+  background-color: #32cd32;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .App h1 {
+    font-size: 2.2rem;
+  }
+
+  .hangman-img {
+    height: 25vh;
+  }
+
+  .word {
+    font-size: 2rem;
+  }
+
+  .letter-btn {
+    font-size: 1.2rem;
+  }
+
+  .letters {
+    grid-template-columns: repeat(8, 1fr);
+    max-width: 600px;
+  }
+}
