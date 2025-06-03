@@ -73,9 +73,12 @@ function App() {
       <p className="word">{renderWord()}</p>
       <div className="letters">{renderButtons()}</div>
 
+      
       {gameOver && (
         <div className="end-screen">
-          <h2>{wrong >= maxWrong ? 'You Lost!' : 'Winner!'}</h2>
+          <h2 className={wrong >= maxWrong ? 'lose' : 'win'}>
+            {wrong >= maxWrong ? 'You Lost!' : 'Winner!'}
+          </h2>
           <p>The word was: {word}</p>
           <button onClick={resetGame}>Play Again</button>
         </div>
