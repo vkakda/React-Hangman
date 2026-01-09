@@ -67,7 +67,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Vishal's <span className='game-title'>Hangman Word Guessing Game </span>- Shri Ram College</h1>
+      <h1>Vishal's <span className='game-title'>Hangman Word Guessing Game </span>- Shri Ram Groups of College</h1>
       <p className="score">Score: {score}</p>
       <img src={`/images/hangman${wrong}.png`} alt="hangman" className="hangman-img" />
       <p className="word">{renderWord()}</p>
